@@ -1,0 +1,37 @@
+window.addEventListener('DOMContentLoaded', function () {
+
+            'use strict';
+            let tab = document.querySelectorAll('.info-header-tab'),
+                info = document.querySelector('.info-header'),
+                tabContent = document.querySelectorAll('.info-tabcontent fade');
+
+
+            function hideTabContent(a) {
+                for (let i = a; i < tabContent.length; i++) {
+                    tab.tabContent[i].classlist.remove('show');
+                    tab.tabContent[i].classlist.add('hide');
+                }
+
+            }
+            hideTabContent(1);
+
+            function showTabContent(b) {
+                if (tabContent[b].classList.contains('hide')) {
+                    tab.tabContent[i].classlist.remove('hide');
+                    tab.tabContent[i].classlist.add('show');
+                }
+            }
+
+            info.addEventListener('click', function (event) {
+                    let target = event.target;
+                    if (target && target.classList.contains('info-header-tab')) {
+                        for (let i = 0; i < tab.length; i++) {
+                            if (target == tab[i]) {
+                                hideTabContent(0);
+                                showTabContent(i);
+                                break;
+                            }
+                        }
+                    }
+                });
+            });
