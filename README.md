@@ -1,2 +1,2 @@
-# Tabs
-Tabs for web development
+# JS_Resources
+Several useful resources for web development
